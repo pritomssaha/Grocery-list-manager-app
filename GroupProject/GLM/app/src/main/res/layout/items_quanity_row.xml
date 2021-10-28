@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:longClickable="true"
+    android:id="@+id/front_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/_5sdp">
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_1sdp"
+             android:background="@color/colorGrey">
+         </View>
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/itemName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/child_recyclerview"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/ln"
+             android:layout_marginTop="0dp" />
+     </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
